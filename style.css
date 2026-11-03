@@ -11,8 +11,8 @@
   
   body {
     background-color: #faf1f2;
-    color: #333333;
-    font-family: 'Times New Roman', Times, serif, !important;
+    color: #222222;
+    font-family: "Century Gothic", Arial, sans-serif !important;
     line-height: 1.5;
   }
   
@@ -22,32 +22,91 @@
     height: auto;
   }
   
-  /*Layout med sidfoten längst ner*/
+  /*Layout (mobil)*/
   #wrapper {
     display: grid;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
     grid-template-rows: auto auto 1fr auto auto;
     min-height: 100vh;
-    max-width: 1400px;
-    margin: 0 auto;
   }
   
-  /*Huvudinnehåll*/
+  nav {
+    grid-area: nav;
+  }
+  
+  header {
+    grid-area: header;
+  }
+  
   main {
-    padding: 0 20px 20px;
+    grid-area: main;
+    padding: 20px;
+  }
+  
+  #wrapper > aside {
+    grid-area: aside;
   }
   
   /*Sidfot*/
   footer {
-    padding: 20px;
-    background-color: #333333;
+    grid-area: footer;
+    padding: 15px;
+    background-color: #000000;
     color: #ffffff;
+    font-size: 0.8rem;
     text-align: center;
   }
   
   /*Tablet: 768px - 990px*/
   @media (min-width: 768px) {
+    #wrapper {
+      grid-template-areas:
+        "header main"
+        "nav main"
+        "aside main"
+        "footer main";
+      grid-template-columns: 180px 1fr;
+      grid-template-rows: auto auto 1fr auto;
+      height: 100vh;
+    }
+  
+    main {
+      overflow-y: auto;
+    }
+  
+    #wrapper > aside {
+      background-color: #ffffff;
+    }
   }
   
   /*Dator: över 990px*/
   @media (min-width: 991px) {
+    #wrapper {
+      grid-template-areas:
+        "nav"
+        "header"
+        "main"
+        "aside"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto 1fr auto auto;
+      height: auto;
+    }
+  
+    main {
+      width: 75%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px 0;
+      overflow-y: visible;
+    }
+  
+    #wrapper > aside {
+      background-color: transparent;
+    }
   }
