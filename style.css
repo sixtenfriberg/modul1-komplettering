@@ -1,0 +1,53 @@
+/*Grund*/
+* {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #faf1f2;
+    color: #333333;
+    font-family: 'Times New Roman', Times, serif, !important;
+    line-height: 1.5;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /*Layout med sidfoten längst ner*/
+  #wrapper {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto auto;
+    min-height: 100vh;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  /*Huvudinnehåll*/
+  main {
+    padding: 0 20px 20px;
+  }
+  
+  /*Sidfot*/
+  footer {
+    padding: 20px;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  /*Tablet: 768px - 990px*/
+  @media (min-width: 768px) {
+  }
+  
+  /*Dator: över 990px*/
+  @media (min-width: 991px) {
+  }
