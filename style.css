@@ -220,6 +220,13 @@ header {
     font-size: 0.75rem;
     text-align: center;
   }
+
+  /*Bootstrap-sidan*/
+#bootstrap .card-img-top {
+    width: 70%;
+    margin: 15px auto 0;
+    border-radius: 50%;
+  }
   
   /*Tablet: 768px - 990px*/
   @media (min-width: 768px) {
