@@ -1,0 +1,276 @@
+/*Grund*/
+* {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #faf1f2;
+    color: #222222;
+    font-family: 'Times New Roman', Times, serif, !important;
+    line-height: 1.5;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /*Layout (mobil)*/
+  #wrapper {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+    grid-template-rows: auto auto 1fr auto auto;
+    min-height: 100vh;
+  }
+  
+  nav {
+    grid-area: nav;
+  }
+  
+  header {
+    grid-area: header;
+  }
+  
+  main {
+    grid-area: main;
+    padding: 20px;
+  }
+  
+  #wrapper > aside {
+    grid-area: aside;
+  }
+  
+  /*Sidfot*/
+  footer {
+    grid-area: footer;
+    padding: 15px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  /*Navigation*/
+nav {
+    background-color: #ffffff;
+  }
+  
+  #menu-btn {
+    padding: 12px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1.1rem;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  nav ul {
+    display: none;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 6px solid #66e04d;
+  }
+  
+  nav ul.open {
+    display: flex;
+  }
+  
+  nav li {
+    border-top: 6px solid #66e04d;
+  }
+  
+  nav a {
+    display: block;
+    padding: 12px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  nav a:hover,
+  nav a:focus {
+    background-color: #eeeeee;
+    color: #000000;
+  }
+  
+  #style-picker {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  /*Sidhuvud*/
+header {
+    background-color: #ffffff;
+  }
+  
+  header article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header img {
+    width: 70px;
+    border-radius: 50%;
+  }
+  
+  header h1 {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  header aside h2 {
+    margin: 10px 0 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  header aside p {
+    margin: 5px 0 0;
+    font-size: 0.75rem;
+  }
+  
+  /*Tablet: 768px - 990px*/
+  @media (min-width: 768px) {
+    #wrapper {
+      grid-template-areas:
+        "header main"
+        "nav main"
+        "aside main"
+        "footer main";
+      grid-template-columns: 180px 1fr;
+      grid-template-rows: auto auto 1fr auto;
+      height: 100vh;
+    }
+  
+    main {
+      overflow-y: auto;
+    }
+  
+    #wrapper > aside {
+      background-color: #ffffff;
+    }
+
+    #menu-btn {
+        display: none;
+    }
+    
+    nav ul {
+        display: flex;
+    }
+
+    header img {
+        width: 120px;
+    }
+  }
+  
+  /*Dator: över 990px*/
+  @media (min-width: 991px) {
+    #wrapper {
+      grid-template-areas:
+        "nav"
+        "header"
+        "main"
+        "aside"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto 1fr auto auto;
+      height: auto;
+    }
+  
+    main {
+      width: 75%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px 0;
+      overflow-y: visible;
+    }
+  
+    #wrapper > aside {
+      background-color: transparent;
+    }
+
+    nav {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    }
+    
+    nav ul {
+        flex-direction: row;
+        width: 75%;
+        max-width: 1400px;
+        margin: 0 auto;
+        border-bottom: none;
+    }
+    
+    nav li {
+        flex: 1;
+        border-top: none;
+    }
+    
+    nav li + li {
+        border-left: 5px solid #66e04d;
+    }
+    
+    nav a,
+      #style-picker {
+        padding: 8px;
+    }
+
+    header {
+        background-color: transparent;
+    }
+    
+    header article {
+        flex-direction: row;
+        width: 75%;
+        max-width: 1400px;
+        margin: 30px auto 10px;
+        background-color: #ffffff;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+        text-align: left;
+    }
+    
+    header img {
+        width: 60px;
+    }
+    
+    header h1 {
+        margin: 0 0 0 15px;
+    }
+    
+    header aside {
+        margin-left: auto;
+        text-align: right;
+    }
+    
+    header aside h2 {
+        margin: 0;
+    }
+  }
