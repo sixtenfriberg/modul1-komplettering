@@ -1,114 +1,114 @@
 /*Grund*/
 * {
     box-sizing: border-box;
-  }
-  
-  html,
-  body {
+}
+
+html,
+body {
     margin: 0;
     padding: 0;
-  }
-  
-  body {
+}
+
+body {
     background-color: #faf1f2;
     color: #222222;
-    font-family: 'Times New Roman', Times, serif, !important;
+    font-family: "Century Gothic", Arial, sans-serif !important;
     line-height: 1.5;
-  }
-  
-  img {
+}
+
+img {
     display: block;
     max-width: 100%;
     height: auto;
-  }
-  
-  /*Layout (mobil)*/
-  #wrapper {
+}
+
+/*Layout (mobil)*/
+#wrapper {
     display: grid;
     grid-template-areas:
-      "header"
-      "nav"
-      "main"
-      "aside"
-      "footer";
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
     grid-template-rows: auto auto 1fr auto auto;
     min-height: 100vh;
-  }
-  
-  nav {
+}
+
+nav {
     grid-area: nav;
-  }
-  
-  header {
+}
+
+header {
     grid-area: header;
-  }
-  
-  main {
+}
+
+main {
     grid-area: main;
     padding: 20px;
-  }
-  
-  #wrapper > aside {
+}
+
+#wrapper>aside {
     grid-area: aside;
-  }
-  
-  /*Sidfot*/
-  footer {
+}
+
+/*Sidfot*/
+footer {
     grid-area: footer;
     padding: 15px;
     background-color: #000000;
     color: #ffffff;
     font-size: 0.8rem;
     text-align: center;
-  }
+}
 
-  /*Navigation*/
+/*Navigation*/
 nav {
     background-color: #ffffff;
-  }
-  
-  #menu-btn {
+}
+
+#menu-btn {
     padding: 12px;
     background-color: #000000;
     color: #ffffff;
     font-size: 1.1rem;
     text-align: center;
     cursor: pointer;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     display: none;
     flex-direction: column;
     margin: 0;
     padding: 0;
     list-style: none;
     border-bottom: 6px solid #66e04d;
-  }
-  
-  nav ul.open {
+}
+
+nav ul.open {
     display: flex;
-  }
-  
-  nav li {
+}
+
+nav li {
     border-top: 6px solid #66e04d;
-  }
-  
-  nav a {
+}
+
+nav a {
     display: block;
     padding: 12px;
     color: #000000;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-  }
-  
-  nav a:hover,
-  nav a:focus {
+}
+
+nav a:hover,
+nav a:focus {
     background-color: #eeeeee;
     color: #000000;
-  }
-  
-  #style-picker {
+}
+
+#style-picker {
     display: block;
     width: 100%;
     padding: 12px;
@@ -120,44 +120,44 @@ nav {
     font-weight: bold;
     text-align: center;
     cursor: pointer;
-  }
+}
 
-  /*Sidhuvud*/
+/*Sidhuvud*/
 header {
     background-color: #ffffff;
-  }
-  
-  header article {
+}
+
+header article {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     text-align: center;
-  }
-  
-  header img {
+}
+
+header img {
     width: 70px;
     border-radius: 50%;
-  }
-  
-  header h1 {
+}
+
+header h1 {
     margin: 10px 0 0;
     font-size: 1.2rem;
     font-weight: bold;
-  }
-  
-  header aside h2 {
+}
+
+header aside h2 {
     margin: 10px 0 0;
     font-size: 1.1rem;
     font-weight: bold;
-  }
-  
-  header aside p {
+}
+
+header aside p {
     margin: 5px 0 0;
     font-size: 0.75rem;
-  }
+}
 
-  /*Startsidan*/
+/*Startsidan*/
 #index article {
     display: flex;
     flex-direction: column;
@@ -165,98 +165,98 @@ header {
     gap: 15px;
     padding: 15px 0;
     border-top: 6px solid #999999;
-  }
-  
-  #index article:last-child {
+}
+
+#index article:last-child {
     border-bottom: 6px solid #999999;
-  }
-  
-  #index img {
+}
+
+#index img {
     flex-shrink: 0;
     width: 120px;
     border-radius: 50%;
-  }
-  
-  #index section {
+}
+
+#index section {
     flex: 1;
-  }
-  
-  #index h2 {
+}
+
+#index h2 {
     margin: 0 0 5px;
     font-size: 1.1rem;
     font-weight: bold;
     text-align: center;
-  }
-  
-  #index p {
+}
+
+#index p {
     margin: 0;
     font-size: 0.85rem;
-  }
+}
 
-  /*Bildsidan*/
+/*Bildsidan*/
 #images {
     display: grid;
     grid-template-columns: 1fr;
     align-content: start;
     gap: 20px;
-  }
-  
-  #images figure {
+}
+
+#images figure {
     margin: 0;
     padding: 10px 10px 0;
     background-color: #ffffff;
-  }
-  
-  #images img {
+}
+
+#images img {
     width: 100%;
     border-radius: 50%;
-  }
-  
-  #images figcaption {
+}
+
+#images figcaption {
     margin: 10px -10px 0;
     padding: 2px;
     background-color: #000000;
     color: #ffffff;
     font-size: 0.75rem;
     text-align: center;
-  }
+}
 
-  /*Bootstrap-sidan*/
-    #bootstrap .card-img-top {
+/*Bootstrap-sidan*/
+#bootstrap .card-img-top {
     width: 70%;
     margin: 15px auto 0;
     border-radius: 50%;
+}
 
-    #bootstrap .carousel-item img {
-        border-radius: 50%;
-      }
-  }
-  
-  /*Tablet: 768px - 990px*/
-  @media (min-width: 768px) {
+#bootstrap .carousel-item img {
+    border-radius: 50%;
+}
+
+/*Tablet: 768px - 990px*/
+@media (min-width: 768px) {
     #wrapper {
-      grid-template-areas:
-        "header main"
-        "nav main"
-        "aside main"
-        "footer main";
-      grid-template-columns: 180px 1fr;
-      grid-template-rows: auto auto 1fr auto;
-      height: 100vh;
+        grid-template-areas:
+            "header main"
+            "nav main"
+            "aside main"
+            "footer main";
+        grid-template-columns: 180px 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        height: 100vh;
     }
-  
+
     main {
-      overflow-y: auto;
+        overflow-y: auto;
     }
-  
-    #wrapper > aside {
-      background-color: #ffffff;
+
+    #wrapper>aside {
+        background-color: #ffffff;
     }
 
     #menu-btn {
         display: none;
     }
-    
+
     nav ul {
         display: flex;
     }
@@ -268,11 +268,11 @@ header {
     #index article {
         flex-direction: row;
     }
-    
+
     #index article:nth-child(even) {
         flex-direction: row-reverse;
     }
-    
+
     #index h2 {
         text-align: left;
     }
@@ -281,38 +281,38 @@ header {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
-  }
-  
-  /*Dator: över 990px*/
-  @media (min-width: 991px) {
+}
+
+/*Dator: över 990px*/
+@media (min-width: 991px) {
     #wrapper {
-      grid-template-areas:
-        "nav"
-        "header"
-        "main"
-        "aside"
-        "footer";
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto 1fr auto auto;
-      height: auto;
+        grid-template-areas:
+            "nav"
+            "header"
+            "main"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto auto;
+        height: auto;
     }
-  
+
     main {
-      width: 75%;
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 20px 0;
-      overflow-y: visible;
+        width: 75%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px 0;
+        overflow-y: visible;
     }
-  
-    #wrapper > aside {
-      background-color: transparent;
+
+    #wrapper>aside {
+        background-color: transparent;
     }
 
     nav {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     }
-    
+
     nav ul {
         flex-direction: row;
         width: 75%;
@@ -320,25 +320,25 @@ header {
         margin: 0 auto;
         border-bottom: none;
     }
-    
+
     nav li {
         flex: 1;
         border-top: none;
     }
-    
-    nav li + li {
+
+    nav li+li {
         border-left: 5px solid #66e04d;
     }
-    
+
     nav a,
-      #style-picker {
+    #style-picker {
         padding: 8px;
     }
 
     header {
         background-color: transparent;
     }
-    
+
     header article {
         flex-direction: row;
         width: 75%;
@@ -348,20 +348,20 @@ header {
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
         text-align: left;
     }
-    
+
     header img {
         width: 60px;
     }
-    
+
     header h1 {
         margin: 0 0 0 15px;
     }
-    
+
     header aside {
         margin-left: auto;
         text-align: right;
     }
-    
+
     header aside h2 {
         margin: 0;
     }
@@ -370,4 +370,4 @@ header {
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
     }
-  }
+}
